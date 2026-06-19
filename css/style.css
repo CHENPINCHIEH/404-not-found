@@ -1,0 +1,211 @@
+.body__container-background {
+    background: url("../images/error_desk_bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* .body-background-color {
+    background-color: #f0c6a6;
+} */
+
+.body__container {
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+    height: 100vh !important;
+}
+
+.font-setting,
+.font-setting:hover {
+    color: #5f3e52;
+    font-weight: 900;
+}
+
+.container__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    position: relative;
+}
+
+.container__content__box__imgsbox {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container__content__box {
+    display: flex;
+    align-items: flex-end;
+}
+
+.container__div-404 {
+    text-align: center;
+    margin-right: -3vw;
+    margin-left: 3vw;
+    padding-bottom: 3vh;
+}
+
+.btn-back-to-home,
+.btn-back-to-home:active,
+.btn-back-to-home:hover,
+.btn-back-to-home:active {
+    text-decoration: none;
+    padding: 8px 43px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: -3px 3px 2px #85624f;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.container__div-404 h2 {
+    font-size: 27px;
+}
+
+.container__div-404__404 {
+    max-width: 300px;
+}
+
+.container__content__role {
+    max-width: 200px;
+}
+
+.position-change__grassbox {
+    top: 50%;
+    right: -200px;
+    z-index: 3;
+    position: absolute;
+}
+
+.position-change__grass {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.position-change__grass-shadow {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    z-index: 1;
+}
+
+.position-change__grass-shadow {
+    animation-name: moving;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: linear;
+
+    animation-iteration-count: infinite;
+    
+}
+
+.position-change__grass {
+    animation: moving 6s linear 0s infinite normal, 
+    grass-rotate 1s linear 0s infinite reverse;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+@media screen and (max-width:768px) {
+    .container__content__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .body__container-background {
+        background: url("../images/error_mobile_bg.png") no-repeat center center fixed;
+        background-size: cover;
+    }
+    .container__div-404 {
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-bottom: 0px;
+    }
+    .container__content__role {
+        width: 40vw;
+        max-width: 200px;
+    }
+    .container__div-404__404 {
+        width: 60vw;
+        max-width: 314px;
+    }
+    .btn-back-to-home,
+    .btn-back-to-home:active,
+    .btn-back-to-home:hover,
+    .btn-back-to-home:active {
+        padding: 8px 25px;
+        font-size: 15px;
+    }
+    .container__div-404 h2 {
+        font-size: 20px;
+    }
+    .container__div-404 h4 {
+        font-size: 12px;
+    }
+    .position-change {
+        position: absolute;
+    }
+    .position-change__planet {
+        width: 20vw;
+        max-width: 100px;
+        top: 0px;
+    }
+    .position-change__grass {
+        width: 8vw;
+    }
+
+    .position-change__grass-shadow {
+        top: 3vh;
+        width: 12vw;
+    }
+    .container__content__box {
+        position: relative;
+    }
+    .position-change__planetbox {
+        top: 20%;
+        right: -25px;
+    }
+    .position-change__grassbox {
+        top: 35%;
+
+    }
+  
+
+
+}
+
+/* 動畫 */
+
+@keyframes moving {
+    from {
+        right: 0px;
+    }
+    to {
+        right: 180vw;
+    }
+}
+
+@keyframes grass-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* @keyframes moving-small {
+    from {
+        left: 0px;
+    }
+    to {
+        right: 100px;
+    }
+} */
